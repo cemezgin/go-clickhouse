@@ -280,11 +280,11 @@ import (
 )
 
 func main() {
-	// The first step is to register the clickhouse driver.
+	// The first step is to register clickhouse driver.
 	sqltrace.Register("chhttp", &clickhouse.Driver{})
 
 	// Followed by a call to Open.
-    db, err := sqltrace.Open("chhttp", "http://127.0.0.1:8123/default")
+	db, err := sqltrace.Open("chhttp", "http://127.0.0.1:8123/default")
 	if err != nil {
 		log.Fatal(err)
 	}
